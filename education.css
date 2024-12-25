@@ -1,0 +1,47 @@
+.timeline {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #333;
+}
+
+.timeline-event {
+    position: relative;
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-event:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-event:nth-child(even) {
+    left: 50%;
+    transform: translateX(-100%);
+}
+
+.timeline-event::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    background: #333;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}

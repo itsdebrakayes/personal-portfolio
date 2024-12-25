@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="aboutMe.css">
+</head>
+<body>
+    <div class="notes-app">
+        <div class="title-bar">
+            <div class="buttons">
+                <span class="close"></span>
+                <span class="minimize"></span>
+                <span class="maximize"></span>
+            </div>
+            <div class="title">About Me</div>
+        </div>
+        <div id="main-content" class="content">
+            <div class="instagram-profile">
+                <!-- Profile Header -->
+                <div class="profile-header">
+                    <img class="profile-pic" src="/images/profilePic.jpeg" alt="Profile Picture">
+                    <div class="profile-info">
+                        <h2 class="username">Debra-Kaye Smith</h2>
+                        <p class="bio">This is the bio. Add a description about yourself here.</p>
+                    </div>
+                </div>
+                <!-- Photo Grid -->
+                <div class="photo-grid">
+                    <div class="photo" onclick="flipPhoto(this)">
+                        <img src="../images/photo1.jpg" alt="Photo 1">
+                        <div class="description">Description about me for photo 1.</div>
+                    </div>
+                    <div class="photo" onclick="flipPhoto(this)">
+                        <img src="../images/photo2.jpg" alt="Photo 2">
+                        <div class="description">Description about me for photo 2.</div>
+                    </div>
+                    <div class="photo" onclick="flipPhoto(this)">
+                        <img src="../images/photo3.jpg" alt="Photo 3">
+                        <div class="description">Description about me for photo 3.</div>
+                    </div>
+                    <!-- Add more photos as needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="aboutMe.js"></script>
+</body>
+</html>
