@@ -41,8 +41,15 @@ body {
     margin: 0;
 }
 
+.stats {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
 .bio {
-    margin-top: 5px;
+    margin-top: 10px;
     font-size: 14px;
     line-height: 1.5;
 }
@@ -63,6 +70,8 @@ body {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: perspective(1000px);
+    transition: transform 0.6s;
 }
 
 .photo img {
@@ -75,8 +84,8 @@ body {
     transform: scale(1.1);
 }
 
-.description {
-    display: none;
+.photo .description {
+    display: flex;
     position: absolute;
     top: 0;
     left: 0;
@@ -84,7 +93,6 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
-    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -92,9 +100,17 @@ body {
     box-sizing: border-box;
     opacity: 0;
     transition: opacity 0.3s ease;
+    backface-visibility: hidden;
 }
 
 .photo:hover .description {
-    display: flex;
     opacity: 1;
+}
+
+.photo.flipped {
+    transform: rotateY(180deg);
+}
+
+.photo img, .photo .description {
+    backface-visibility: hidden;
 }
